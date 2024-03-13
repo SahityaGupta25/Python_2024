@@ -1,0 +1,1 @@
+import random # By using import keyword we can import any module . Random is a module which can give us power to generate a random number
