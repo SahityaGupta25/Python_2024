@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
+
 root = tk.Tk()
 root.geometry("400x180")
 root.title("Miles to Kilometer!")
@@ -8,7 +9,10 @@ root.title("Miles to Kilometer!")
 # ~  --------------------    Convert Function    --------------------------------------------------------------
 
 def  convert():
-    print(input_entry.get())
+    mile_input = input_entry_int.get()
+    km_output = mile_input * 1.61 
+    output_string.set(km_output)
+
 
 # ~   ---------------------------------------------------------------------------------------------------------
 
@@ -30,8 +34,8 @@ input_frame.pack(pady=10)
 # ^ --------------------------------------------------------------------------------------------------------------
 
 #!  ------------------- Output Label ------------------------------------------------------------------------------
-
-output_label = ttk.Label(master=root,text="Output", font=("Arial",16,"normal"))
+output_string = tk.StringVar()
+output_label = ttk.Label(master=root,text="Output", font=("Arial",16,"normal"),textvariable=output_string)
 output_label.pack(pady=5)
 
 #!  ---------------------------------------------------------------------------------------------------------------
