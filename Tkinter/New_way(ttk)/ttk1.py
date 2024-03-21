@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
-root.geometry("400x140")
+root.geometry("400x180")
 root.title("Miles to Kilometer!")
 
 # ~  --------------------    Convert Function    --------------------------------------------------------------
@@ -20,7 +20,8 @@ title_label = ttk.Label(master=root,text="Miles to Kilometer Converter",font=("c
 
 # ^ -----------------   ENTRY       ------------------------------------------------------------------------------
 input_frame = ttk.Frame(master=root )
-input_entry =  ttk.Entry(master=input_frame)
+input_entry_int = tk.IntVar()
+input_entry =  ttk.Entry(master=input_frame,textvariable=input_entry_int)
 input_button = ttk.Button(master=input_frame,text="Convert",command=convert)
 input_entry.pack(side="left",padx=10)
 input_button.pack(side="left")
