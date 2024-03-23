@@ -6,12 +6,16 @@ root = tk.Tk()
 root.title("Getting and setting widgets (Time - 1:03:00)")
 root.geometry("800x400")
 
-string_var = tk.StringVar()
+string_var = tk.StringVar(value="test")
 
 my_label = ttk.Label(master=root,textvariable=string_var)
 my_label.pack()
 
 my_entry = ttk.Entry(master=root,textvariable=string_var)
 my_entry.pack()
+
+my_entryy = ttk.Entry(master=root,textvariable=string_var)
+my_entryy.pack()
+
 
 root.mainloop()
