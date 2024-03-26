@@ -22,17 +22,24 @@ check_btn = ttk.Checkbutton(
     command=lambda:print("Yes Im 18 +")
     ).pack()
 
-# &  Instead of text varable only "variable is used as attribute while making check box"
+# &  Instead of text variable only "variable" is used as attribute while making check box"
 
 
 # ^ -----------------   Radio Button    ------------------------------------------------------------------------------
+def radio_func():
+    print(f"{check_var.get()}")
+    check_var.set(False)
 
+radio_var = tk.StringVar()      #& Using string var because value are also in string
+Check_var = tk.BooleanVar()
 
+radio1 = ttk.Radiobutton(master=root,text="Radio A",value='A',variable=radio_var,command=radio_func)
+radio2 = ttk.Radiobutton(master=root,text="Radio B",value='B',variable=radio_var,command=radio_func)
 
-radio1 = ttk.Radiobutton(master=root,text="Radio A",value='A')
-radio2 = ttk.Radiobutton(master=root,text="Radio B",value='B')
-
-exercise_check = 
+exercise_check = ttk.Checkbutton(root,text="Exercise Check",variable=check_var,command=lambda: print(radio_var.get()))
+radio1.pack()
+radio2.pack()
+exercise_check.pack()
 
 # !  Value attribute is important for a radio button
 
