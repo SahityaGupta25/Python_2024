@@ -2,19 +2,20 @@ import tkinter as tk
 from tkinter import ttk
 
 
+# TODO      print 'Mousewheel' when the user holds down shift and uses the mousewheel while text is selected.
+
 root = tk.Tk()
-root.title("Combo box & Spin Box in tkinter (Time - 1:54:00)")
+root.title("Buttons in tkinter (Time - 1:52:11)")
 
-# ^ -----------------   COMBO BOX       ------------------------------------------------------------------------------
+# ^ -----------------   TEXT       ------------------------------------------------------------------------------
+text = tk.Text(root)
+text.pack()
 
-items = ('Coconut','Pan Cake','Sandwich','Manchurian')
-combo_box=ttk.Combobox(root)
-#! combo_box['values'] = items
-combo_box.configure(values=items)
-combo_box.pack()
+# ^ -----------------   BIND       ------------------------------------------------------------------------------
+text.bind('<Shift-MouseWheel>',lambda event : print(f"Event "))
 
 
-root.geometry("800x400")
+root.geometry("800x600")
 
 # ^ -----------------   ENTRY       ------------------------------------------------------------------------------
 # ^ -----------------   ENTRY       ------------------------------------------------------------------------------
@@ -29,11 +30,3 @@ root.geometry("800x400")
 
 
 root.mainloop()
-
-# * -----------------   NOTES       ------------------------------------------------------------------------------
-# * Combo box is nothing but a drop down menu
-# * Spin Box is a menu of pre defined value 
-# *
-# *
-# *
-# *
