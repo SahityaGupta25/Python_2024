@@ -1,5 +1,7 @@
+# GitHub - https://github.com/SahityaGupta25
 import tkinter as tk
 from tkinter import ttk
+import ttkbootstrap as tb
 
 # ! -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -54,6 +56,17 @@ menu.add_cascade(label="Help",menu=help,command=lambda:print("Help"))
 # ? btnSubMenu.add_command(label='Entry 1',command=lambda : print("Entry 1"))
 # ? menu_btn.configure(menu = btnSubMenu)
 
+# ! ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+# ^ -----------------   Date Entry using Bootstrap       ------------------------------------------------------------------------------
+
+my_date = tb.DateEntry(root,bootstyle="danger")
+my_date.pack(anchor='nw')
 # ! ----------------------------------------------------------------------------------------------------------------------------
 
 
